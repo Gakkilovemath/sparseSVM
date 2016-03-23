@@ -7,12 +7,12 @@
 \tabular{ll}{
 Package: \tab sparseSVM\cr
 Type: \tab Package\cr
-Version: \tab 1.0-5\cr
-Date: \tab 2016-03-20\cr
+Version: \tab 1.1-2\cr
+Date: \tab 2016-03-21\cr
 License: \tab GPL-3\cr
 }
-Accepts \code{X,y} data for binary classification where \code{y} belongs to \code{{+1,-1}}, and
-produces the solution path over a grid of values of the regularization parameter \code{lambda}. Also provides functionality for plotting, prediction and parallelized cross-validation.
+Accepts \code{X,y} data for binary classification and
+produces the solution path over a grid of values of the regularization parameter \code{lambda}. Also provides functions for plotting, prediction and parallelized cross-validation.
 }
 \author{
 Congrui Yi and Yaohui Zeng \cr
@@ -26,8 +26,14 @@ eps = rnorm(1000)
 y = sign(b + drop(X[,1:10] \%*\% w + eps))
 
 fit = sparseSVM(X, y)
-coef(fit, 0.01)
-predict(fit, X[1:5,], lambda = c(0.02, 0.01))
+coef(fit, 0.05)
+predict(fit, X[1:5,], lambda = c(0.2, 0.1))
+plot(fit)
+
+cv.fit <- cv.sparseSVM(X, y, ncores = 2, seed = 1234)
+predict(cv.fit, X)
+coef(cv.fit)
+plot(cv.fit)
 }
 \keyword{models}
 \keyword{classification}
