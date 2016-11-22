@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/CY-dev/sparseSVM.svg?branch=master)](https://travis-ci.org/CY-dev/sparseSVM)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/biglasso)](https://CRAN.R-project.org/package=sparseSVM)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/sparseSVM)](https://CRAN.R-project.org/package=sparseSVM)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/sparseSVM)](http://www.r-pkg.org/pkg/sparseSVM)
 
 # sparseSVM
